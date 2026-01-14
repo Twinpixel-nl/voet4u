@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import foto2 from '../assets/foto2.jpeg'; // Zorg dat deze foto in src/assets staat
+---
+
+<section id="specialisaties" class="py-24 relative">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+      <div class="max-w-xl">
+        <h2 class="text-4xl font-bold text-slate-900 mb-4 italic">Waarom Voet 4 U?</h2>
+        <p class="text-slate-600 italic">"Ik kijk verder dan alleen de klacht. Samen zoeken we naar de oorzaak en de juiste ontspanning."</p>
+      </div>
+      <div class="hidden md:block h-[1px] flex-1 bg-slate-200 mx-12 mb-4"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Kaart 1 -->
+      <div class="group p-10 bg-white border border-slate-100 rounded-[2rem] shadow-sm hover:shadow-xl hover:border-blue-100 transition-all duration-500">
+        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-4 italic">Stressreductie</h3>
+        <p class="text-slate-500 leading-relaxed text-sm">Speciale massages om het zenuwstelsel tot rust te brengen en afvalstoffen sneller af te voeren.</p>
+      </div>
+      
+      <!-- Voeg hier kaart 2 en 3 op dezelfde manier toe -->
+    </div>
+  </div>
+</section>

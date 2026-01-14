@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import foto3 from '../assets/foto3.jpeg'; // Jouw 3e foto
+---
+
+<section id="contact" class="py-20 bg-voet-blue-50">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto bg-white rounded-[2.5rem] shadow-xl overflow-hidden flex flex-col lg:flex-row">
+      
+      <!-- Linkerkant: Foto 3 & Info -->
+      <div class="lg:w-1/2 relative min-h-[400px] flex flex-col">
+        <Image 
+          src={foto3} 
+          alt="Praktijk Voet 4 U" 
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <!-- Overlay met info voor betere leesbaarheid -->
+        <div class="relative mt-auto p-8 md:p-12 bg-gradient-to-t from-voet-blue-900/90 to-transparent text-white">
+          <h3 class="text-2xl font-bold mb-4 italic">Contactgegevens</h3>
+          <div class="space-y-3 text-blue-50">
+            <p>📍 Kon. Julianastraat 1A, 6668AG Randwijk</p>
+            <p>📞 06 - 19 777 921</p>
+            <p>✉️ info@voet4u.nl</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rechterkant: Formulier -->
+      <div class="lg:w-1/2 p-8 md:p-12">
+        <h2 class="text-3xl font-bold text-voet-blue-900 mb-6 italic">Stuur een bericht</h2>
+        <p class="text-slate-600 mb-8">Heeft u een vraag of wilt u een afspraak maken? Vul het formulier in en ik neem zo snel mogelijk contact met u op.</p>
+
+        <!-- Formspree formulier -->
+        <form action="https://formspree.io/f/JOUW_ID" method="POST" class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-1">Naam</label>
+            <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-voet-blue-600 outline-none transition-all" />
+          </div>
+          
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-1">E-mailadres</label>
+            <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-voet-blue-600 outline-none transition-all" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-1">Bericht</label>
+            <textarea name="message" required rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-voet-blue-600 outline-none transition-all"></textarea>
+          </div>
+
+          <button type="submit" class="w-full btn-primary text-center">
+            Verstuur bericht
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

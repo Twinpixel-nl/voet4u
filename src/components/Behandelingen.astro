@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import foto2 from '../assets/foto2.jpeg';
+---
+<section id="behandelingen" class="py-24 bg-slate-50 rounded-[3rem]">
+  <div class="container mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
+      <div class="space-y-6">
+        <h2 class="text-4xl font-bold text-slate-900 italic">Voetreflexmassage</h2>
+        <p class="text-slate-600 leading-relaxed">
+          Voetreflexmassage is een massage waarbij reflexpunten in de voeten en onderbenen gestimuleerd worden. Dit werkt door naar de corresponderende organen, zenuwen en klieren, waardoor de balans in je lichaam zich kan herstellen.
+        </p>
+        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <h4 class="font-bold mb-4 text-blue-600 uppercase tracking-widest text-xs">Verlichting bij klachten als:</h4>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm font-medium">
+            <li>• Hoofdpijn & Migraine</li>
+            <li>• Spier- & Gewrichtspijn</li>
+            <li>• Spijsverteringsklachten</li>
+            <li>• Stress & Vermoeidheid</li>
+            <li>• Slaapstoornissen</li>
+            <li>• Hormonale problemen</li>
+          </ul>
+        </div>
+        <p class="text-sm text-slate-500 italic font-medium border-l-2 border-blue-600 pl-4">
+          Onco-voetreflexmassage: Biedt verlichting en diepe ontspanning tijdens of na chemokuren.
+        </p>
+      </div>
+      <Image src={foto2} alt="Behandeling" class="rounded-[2.5rem] shadow-xl" />
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="p-10 bg-white rounded-[2rem] shadow-sm border border-slate-100">
+        <h3 class="text-2xl font-bold mb-4 italic">Oor-acupunctuur</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">Inzetbaar bij pijn, sportblessures, hooikoorts of ter ondersteuning bij stoppen met roken. Ook geschikt voor kinderen dankzij pijnloze magneetbolletjes.</p>
+      </div>
+      <div class="p-10 bg-white rounded-[2rem] shadow-sm border border-slate-100">
+        <h3 class="text-2xl font-bold mb-4 italic">Cupping Massage</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">Massage van bindweefsel en fascia met vacuümcups. Geeft directe verlichting bij nek-, schouder- en rugklachten.</p>
+        <p class="text-[10px] text-slate-400 uppercase tracking-tighter">Let op: Na behandeling kunnen rode strepen of blauwe plekken ontstaan (trekt weg binnen 3-5 dagen).</p>
+      </div>
+    </div>
+  </div>
+</section>

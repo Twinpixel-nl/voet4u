@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+import foto2 from '../assets/foto2.jpeg';
+import foto3 from '../assets/foto3.jpeg';
+---
+<section id="over-mij" class="py-20 bg-blue-50">
+  <div class="container mx-auto px-6">
+    <!-- Deel 1: Over de praktijk -->
+    <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+      <div class="md:w-1/2">
+        <Image src={foto2} alt="De praktijk" class="rounded-2xl shadow-xl" />
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold text-blue-900">Gediplomeerd Pedicure</h2>
+        <p class="mt-4 text-slate-600">Anja is een gediplomeerd pedicure en voetreflextherapeut gevestigd in Randwijk. In haar rustige praktijk staat persoonlijke aandacht centraal.</p>
+      </div>
+    </div>
+
+    <!-- Deel 2: Praktisch -->
+    <div id="praktisch" class="flex flex-col md:flex-row-reverse items-center gap-12">
+      <div class="md:w-1/2">
+        <Image src={foto3} alt="Behandeling" class="rounded-2xl shadow-xl" />
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold text-blue-900">Praktische Informatie</h2>
+        <ul class="mt-6 space-y-4 text-slate-700">
+          <li class="flex items-center">✅ <strong>Geen pin:</strong> Betaling graag contant.</li>
+          <li class="flex items-center">✅ <strong>Afspraak:</strong> Behandelingen alleen volgens afspraak.</li>
+          <li class="flex items-center">✅ <strong>Annuleren:</strong> Minimaal 24 uur van tevoren.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/foto1.jpeg';
+---
+<section class="py-20 lg:py-32 overflow-hidden">
+  <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <h1 class="text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-8">
+        Breng je lichaam weer in <span class="text-blue-600 italic">balans.</span>
+      </h1>
+      <p class="text-lg text-slate-600 leading-relaxed mb-10 max-w-md">
+        Professionele voetreflexmassage, oor-acupunctuur en cupping in Randwijk. Voor rust, herstel en diepe ontspanning.
+      </p>
+      <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-100">
+        Maak een afspraak
+      </a>
+    </div>
+    <div class="relative">
+      <Image src={heroImage} alt="Voet 4 U" class="rounded-[2.5rem] shadow-2xl object-cover w-full h-[500px]" />
+    </div>
+  </div>
+</section>
