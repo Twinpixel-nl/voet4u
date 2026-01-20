@@ -2,49 +2,46 @@
 import { Image } from 'astro:assets';
 import foto2 from '../assets/foto2.jpeg';
 ---
-<section id="behandelingen" class="py-24 bg-slate-50 rounded-[3rem]">
+<section id="behandelingen" class="py-24 bg-white rounded-[3rem]">
   <div class="container mx-auto px-6">
     <div class="grid lg:grid-cols-2 gap-20 items-start mb-24">
-      <div class="space-y-6">
-        <h2 class="text-4xl font-bold text-slate-900 italic">Voetreflexmassage</h2>
-        <p class="text-slate-600 leading-relaxed">
+      <div class="space-y-8">
+        <h2 class="text-5xl font-serif text-[#2c3e50] italic">Voetreflexmassage</h2>
+        <p class="text-slate-600 leading-relaxed font-light text-lg">
           Voetreflexmassage is een massage waarbij reflexpunten in de voeten en onderbenen gestimuleerd worden. Dit werkt door naar de corresponderende organen, zenuwen en klieren, waardoor de balans in je lichaam zich kan herstellen.
         </p>
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-          <h4 class="font-bold mb-4 text-blue-600 uppercase tracking-widest text-xs">Verlichting bij klachten als:</h4>
-          <!-- Vervang je <li> lijst door dit: -->
-<ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm font-medium">
-  {[
-    "Hoofdpijn & Migraine", 
-    "Spier- & Gewrichtspijn", 
-    "Spijsverteringsklachten", 
-    "Stress & Vermoeidheid", 
-    "Slaapstoornissen", 
-    "Hormonale problemen"
-  ].map((item) => (
-    <li class="flex items-center gap-2 italic text-slate-700">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-      {item}
-    </li>
-  ))}
-</ul>
+        <div class="bg-[#f4f7f9] p-8 rounded-[2.5rem] border border-blue-50 shadow-sm">
+          <h4 class="font-bold mb-6 text-[#4a7c92] uppercase tracking-widest text-xs">Verlichting bij klachten als:</h4>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-medium">
+            {[
+              "Hoofdpijn & Migraine", "Spier- & Gewrichtspijn", 
+              "Spijsvertering", "Stress & Vermoeidheid", 
+              "Slaapstoornissen", "Hormonale problemen"
+            ].map((item) => (
+              <li class="flex items-center gap-3 italic text-slate-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a7c92" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
-        <p class="text-sm text-slate-500 italic font-medium border-l-2 border-blue-600 pl-4">
+        <p class="text-sm text-[#4a7c92] italic font-medium border-l-2 border-[#8fb3c5] pl-4">
           Onco-voetreflexmassage: Biedt verlichting en diepe ontspanning tijdens of na chemokuren.
         </p>
       </div>
-      <Image src={foto2} alt="Behandeling" class="rounded-[2.5rem] shadow-xl" />
+      <!-- Afbeelding 2 -->
+      <Image src={foto2} alt="Behandeling" class="rounded-t-[2rem] rounded-b-[10rem] shadow-2xl object-cover w-full h-[550px]" />
     </div>
 
-    <div class="grid md:grid-cols-2 gap-12">
-      <div class="p-10 bg-white rounded-[2rem] shadow-sm border border-slate-100">
-        <h3 class="text-2xl font-bold mb-4 italic">Oor-acupunctuur</h3>
-        <p class="text-slate-600 text-sm leading-relaxed mb-4">Inzetbaar bij pijn, sportblessures, hooikoorts of ter ondersteuning bij stoppen met roken. Ook geschikt voor kinderen dankzij pijnloze magneetbolletjes.</p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="p-10 bg-[#f4f7f9] rounded-[2.5rem] border border-blue-50">
+        <h3 class="text-2xl font-serif mb-4 italic text-[#2c3e50]">Oor-acupunctuur</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4 font-light">Inzetbaar bij pijn, sportblessures, hooikoorts of ter ondersteuning bij stoppen met roken. Ook geschikt voor kinderen dankzij pijnloze magneetbolletjes.</p>
       </div>
-      <div class="p-10 bg-white rounded-[2rem] shadow-sm border border-slate-100">
-        <h3 class="text-2xl font-bold mb-4 italic">Cupping Massage</h3>
-        <p class="text-slate-600 text-sm leading-relaxed mb-4">Massage van bindweefsel en fascia met vacuümcups. Geeft directe verlichting bij nek-, schouder- en rugklachten.</p>
-        <p class="text-[10px] text-slate-400 uppercase tracking-tighter">Let op: Na behandeling kunnen rode strepen of blauwe plekken ontstaan (trekt weg binnen 3-5 dagen).</p>
+      <div class="p-10 bg-[#4a7c92] text-white rounded-[2.5rem] shadow-lg">
+        <h3 class="text-2xl font-serif mb-4 italic">Cupping Massage</h3>
+        <p class="text-blue-50 text-sm leading-relaxed mb-4 font-light">Massage van bindweefsel en fascia met vacuümcups. Geeft directe verlichting bij nek-, schouder- en rugklachten.</p>
+        <p class="text-[10px] text-blue-200 uppercase tracking-widest opacity-80">Let op: Na behandeling kunnen rode strepen ontstaan (trekt weg binnen 3-5 dagen).</p>
       </div>
     </div>
   </div>
