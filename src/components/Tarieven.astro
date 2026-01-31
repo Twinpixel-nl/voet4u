@@ -1,34 +1,68 @@
-<section id="tarieven" class="py-24">
+<section id="tarieven" class="py-24 bg-white">
   <div class="container mx-auto px-6 max-w-4xl">
     <div class="text-center mb-16">
-      <h2 class="text-5xl font-serif italic text-[#2c3e50]">Investering in jezelf</h2>
-      <p class="text-[#8fb3c5] uppercase tracking-widest text-xs mt-4 font-bold">Prijzen per behandeling</p>
+      <h2 class="text-5xl font-serif text-[#2c3e50] italic">Tarieven</h2>
+      <p class="text-[#8fb3c5] uppercase tracking-widest text-[10px] font-bold mt-4">Transparante prijzen voor uw welzijn</p>
     </div>
 
-    <div class="glass-card p-8 md:p-16">
-      <div class="divide-y divide-blue-50">
-        {[
-          { name: "Basis Pedicure", price: "€ 32,50", desc: "Verzorging van nagels en huid" },
-          { name: "Voetreflexmassage (60 min)", price: "€ 60,00", desc: "Focus op ontspanning en balans" },
-          { name: "Voetreflexmassage (90 min)", price: "€ 85,00", desc: "Intensieve behandeling bij klachten" },
-          { name: "Oor-acupunctuur", price: "€ 30,00", desc: "Pijnloos incl. magneetbolletjes" },
-          { name: "Cupping Massage", price: "€ 35,00", desc: "Diepe bindweefselmassage" },
-        ].map((item) => (
-          <div class="py-6 flex justify-between items-center group">
-            <div>
-              <h3 class="text-xl font-serif text-slate-800 group-hover:text-[#4a7c92] transition-colors">{item.name}</h3>
-              <p class="text-sm text-slate-400 font-light">{item.desc}</p>
-            </div>
-            <div class="text-xl font-serif text-[#4a7c92]">{item.price}</div>
+    <div class="space-y-12">
+      <!-- Voetreflex -->
+      <div>
+        <h4 class="text-[#4a7c92] font-bold uppercase text-xs tracking-widest mb-6 border-b border-blue-50 pb-2">Voetreflexmassage</h4>
+        <div class="space-y-4">
+          <div class="flex justify-between items-end">
+            <span class="text-slate-700">1ste consult (Intake + massage) <small class="text-slate-400 ml-2">90 min</small></span>
+            <span class="font-serif text-xl">€ 85,-</span>
           </div>
-        ))}
+          <div class="flex justify-between items-end">
+            <span class="text-slate-700">Vervolg massage <small class="text-slate-400 ml-2">60 min</small></span>
+            <span class="font-serif text-xl">€ 60,-</span>
+          </div>
+          <div class="flex justify-between items-end">
+            <span class="text-slate-700">Vervolg massage <small class="text-slate-400 ml-2">90 min</small></span>
+            <span class="font-serif text-xl">€ 85,-</span>
+          </div>
+        </div>
       </div>
-      
-      <div class="mt-12 p-6 bg-blue-50/50 rounded-2xl text-center">
-        <p class="text-[11px] text-slate-500 uppercase tracking-widest leading-relaxed font-medium">
-          Afspraken die niet minimaal 24 uur van tevoren zijn afgezegd, <br/> worden in rekening gebracht.
-        </p>
+
+      <!-- Cupping -->
+      <div>
+        <h4 class="text-[#4a7c92] font-bold uppercase text-xs tracking-widest mb-6 border-b border-blue-50 pb-2">Cupping</h4>
+        <div class="space-y-4">
+          <div class="flex justify-between items-end">
+            <span class="text-slate-700">Nek en schouders</span>
+            <span class="font-serif text-xl">€ 35,-</span>
+          </div>
+          <div class="flex justify-between items-end">
+            <span class="text-slate-700">Nek, schouders en onderrug</span>
+            <span class="font-serif text-xl">€ 45,-</span>
+          </div>
+          <div class="flex justify-between items-end">
+            <span class="text-slate-700">Detoxcupping (Rug, buik, benen) <small class="text-slate-400 ml-2">90 min</small></span>
+            <span class="font-serif text-xl">€ 90,-</span>
+          </div>
+        </div>
       </div>
+
+      <!-- Overig -->
+      <div class="pt-6 border-t border-slate-100">
+        <div class="flex justify-between items-end mb-4">
+          <span class="text-slate-700 font-bold">Oor-acupunctuur <small class="text-slate-400 ml-2">30 min</small></span>
+          <span class="font-serif text-xl">€ 30,-</span>
+        </div>
+        <div class="flex justify-between items-end">
+          <span class="text-slate-700 font-bold italic">Holistische behandeling "Dat wat nodig is" <small class="text-slate-400 ml-2">90 min</small></span>
+          <span class="font-serif text-xl">€ 85,-</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Praktische info box -->
+    <div class="mt-20 bg-[#f4f7f9] p-10 rounded-[3rem] text-center border border-blue-50">
+      <p class="text-sm text-slate-600 leading-relaxed italic">
+        Behandeling alleen op afspraak. Annuleren kan kosteloos tot 24 uur van tevoren. <br/>
+        <strong>Let op:</strong> Graag contant voldoen, er is geen mogelijkheid om te pinnen.
+      </p>
     </div>
   </div>
 </section>
