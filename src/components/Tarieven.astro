@@ -1,43 +1,34 @@
-<section id="tarieven" class="py-24 bg-white">
-  <div class="container mx-auto px-6 max-w-3xl">
-    <!-- Header: Geen harde underline meer, maar elegant Serif -->
+<section id="tarieven" class="py-24">
+  <div class="container mx-auto px-6 max-w-4xl">
     <div class="text-center mb-16">
-      <span class="text-[#8fb3c5] uppercase tracking-[0.3em] text-xs font-bold mb-3 block">Investering in jezelf</span>
-      <h2 class="text-5xl font-serif text-[#2c3e50] italic">Tarieven</h2>
-      <div class="w-24 h-1 bg-[#4a7c92]/20 mx-auto mt-6 rounded-full"></div>
+      <h2 class="text-5xl font-serif italic text-[#2c3e50]">Investering in jezelf</h2>
+      <p class="text-[#8fb3c5] uppercase tracking-widest text-xs mt-4 font-bold">Prijzen per behandeling</p>
     </div>
 
-    <!-- De lijst: Luchtig en elegant -->
-    <div class="space-y-8">
-      {[
-        { n: "Vervolg massage (60 min)", p: "€ 60,-" },
-        { n: "Vervolg massage (90 min)", p: "€ 85,-" },
-        { n: "Oor-acupunctuur (30 min)", p: "€ 30,-" },
-        { n: "Cupping (Nek & Schouders)", p: "€ 35,-" },
-        { n: "Holistische behandeling (90 min)", p: "€ 85,-" }
-      ].map(t => (
-        <div class="flex justify-between items-end border-b border-blue-50 pb-4 group">
-          <div class="flex flex-col">
-            <span class="font-serif text-lg text-slate-700 group-hover:text-[#4a7c92] transition-colors">{t.n}</span>
+    <div class="glass-card p-8 md:p-16">
+      <div class="divide-y divide-blue-50">
+        {[
+          { name: "Basis Pedicure", price: "€ 32,50", desc: "Verzorging van nagels en huid" },
+          { name: "Voetreflexmassage (60 min)", price: "€ 60,00", desc: "Focus op ontspanning en balans" },
+          { name: "Voetreflexmassage (90 min)", price: "€ 85,00", desc: "Intensieve behandeling bij klachten" },
+          { name: "Oor-acupunctuur", price: "€ 30,00", desc: "Pijnloos incl. magneetbolletjes" },
+          { name: "Cupping Massage", price: "€ 35,00", desc: "Diepe bindweefselmassage" },
+        ].map((item) => (
+          <div class="py-6 flex justify-between items-center group">
+            <div>
+              <h3 class="text-xl font-serif text-slate-800 group-hover:text-[#4a7c92] transition-colors">{item.name}</h3>
+              <p class="text-sm text-slate-400 font-light">{item.desc}</p>
+            </div>
+            <div class="text-xl font-serif text-[#4a7c92]">{item.price}</div>
           </div>
-          <div class="flex items-center gap-4">
-            <!-- Een subtiel stippellijntje kan ook, maar dit is cleaner -->
-            <span class="font-serif text-xl text-[#4a7c92]">{t.p}</span>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Betalingsinfo: Vriendelijker en minder als een waarschuwing -->
-    <div class="mt-16 bg-[#f4f7f9] p-8 rounded-[2rem] text-center">
-      <div class="flex justify-center mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fb3c5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+        ))}
       </div>
-      <p class="text-sm text-slate-500 font-light italic max-w-md mx-auto leading-relaxed">
-        Betaling is uitsluitend <span class="text-[#4a7c92] font-semibold">contant</span> mogelijk (geen pin). 
-        <br/> 
-        Mocht je een afspraak willen verzetten, doe dit dan minimaal 24 uur van tevoren.
-      </p>
+      
+      <div class="mt-12 p-6 bg-blue-50/50 rounded-2xl text-center">
+        <p class="text-[11px] text-slate-500 uppercase tracking-widest leading-relaxed font-medium">
+          Afspraken die niet minimaal 24 uur van tevoren zijn afgezegd, <br/> worden in rekening gebracht.
+        </p>
+      </div>
     </div>
   </div>
 </section>

@@ -2,61 +2,35 @@
 import { Image } from 'astro:assets';
 import heroImage from '../assets/foto1.jpeg';
 ---
-
-<section class="relative py-20 lg:py-28 overflow-hidden">
-  <!-- Subtiele blauwe gloed op de achtergrond voor diepte -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl -z-10">
-    <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[120px]"></div>
-    <div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-50 rounded-full blur-[100px]"></div>
-  </div>
-
+<section class="relative pt-32 pb-20 overflow-hidden">
   <div class="container mx-auto px-6">
     <div class="flex flex-col lg:flex-row items-center gap-16">
-      
-      <!-- Tekst gedeelte -->
-      <div class="w-full lg:w-1/2 order-2 lg:order-1 text-center lg:text-left">
-        <span class="text-[#8fb3c5] uppercase tracking-[0.3em] text-sm mb-6 block font-medium">
-          Praktijk voor Voetreflexologie
-        </span>
-        <h1 class="text-5xl lg:text-7xl text-[#2c3e50] leading-tight mb-8">
-          Breng je lichaam weer in <span class="italic font-light text-[#4a7c92]">balans.</span>
+      <div class="w-full lg:w-1/2 text-center lg:text-left">
+        <div class="inline-block px-4 py-1.5 bg-blue-50 rounded-full text-[#8fb3c5] uppercase tracking-[0.3em] text-[10px] font-bold mb-6">
+          Natuurlijke Geneeswijze in Randwijk
+        </div>
+        <h1 class="text-6xl lg:text-8xl text-[#2c3e50] leading-[0.9] mb-8">
+          Vind je innerlijke <span class="italic font-light text-[#4a7c92]">balans.</span>
         </h1>
-        <p class="text-lg text-slate-600/80 font-light leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">
-          Ontdek de kracht van voetreflexmassage en cupping in Randwijk. Een moment van diepe rust en herstel voor jezelf.
+        <p class="text-lg text-slate-500 font-light leading-relaxed mb-10 max-w-md mx-auto lg:mx-0">
+          Gespecialiseerde voetreflextherapie en cupping massage gericht op het herstellen van de natuurlijke harmonie in je lichaam.
         </p>
-        
-        <div class="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
-          <a href="#contact" class="btn-primary">
-            Afspraak maken
-          </a>
-          <a href="#over-mij" class="text-[#4a7c92] font-medium border-b border-[#4a7c92]/30 hover:border-[#4a7c92] transition-all pb-1 tracking-wide text-sm uppercase">
-            Mijn werkwijze
+        <div class="flex flex-col sm:flex-row items-center gap-8 justify-center lg:justify-start">
+          <a href="#contact" class="btn-primary text-center">Boek een behandeling</a>
+          <a href="#behandelingen" class="group flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest text-[#4a7c92]">
+            Ontdek diensten
+            <span class="w-8 h-[1px] bg-[#4a7c92] transition-all group-hover:w-12"></span>
           </a>
         </div>
       </div>
 
-      <!-- Afbeelding met een 'arch' vorm -->
-      <div class="w-full lg:w-1/2 order-1 lg:order-2">
-        <div class="relative max-w-md mx-auto lg:max-w-full">
-          <!-- De Arch-vorm doorbreekt het corporate gevoel -->
-          <div class="rounded-t-full rounded-b-2xl overflow-hidden shadow-2xl ring-8 ring-white/50">
-            <Image 
-              src={heroImage} 
-              alt="Voetreflexmassage" 
-              class="w-full h-[550px] object-cover"
-            />
-          </div>
-          
-          <!-- Decoratief element -->
-          <div class="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur p-6 rounded-2xl shadow-lg hidden md:block border border-blue-50">
-             <div class="flex items-center gap-3">
-                <div class="w-2 h-2 rounded-full bg-blue-300"></div>
-                <p class="text-sm font-medium text-slate-700 italic">Persoonlijke aandacht</p>
-             </div>
-          </div>
+      <div class="w-full lg:w-1/2 relative">
+        <div class="relative w-full aspect-[4/5] max-w-[450px] mx-auto overflow-hidden rounded-t-full rounded-b-[2rem] shadow-2xl ring-1 ring-black/5">
+          <Image src={heroImage} alt="Voetreflexmassage" class="w-full h-full object-cover scale-105" />
         </div>
+        <!-- Abstracte vorm op achtergrond -->
+        <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-50/50 rounded-full blur-[100px]"></div>
       </div>
-
     </div>
   </div>
 </section>

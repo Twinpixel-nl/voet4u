@@ -1,36 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  /* Zachtere, meer natuurlijke blauwtinten */
-  --color-primary: #4a7c92;    /* Muted Ocean Blue */
-  --color-secondary: #8fb3c5;  /* Soft Sky Blue */
-  --color-bg: #f4f7f9;         /* Zeer licht ijsblauw/grijs (ipv hard wit) */
-  --color-text: #2c3e50;       /* Diep donkerblauw/grijs */
+@layer base {
+  :root {
+    --color-primary: #4a7c92;
+    --color-secondary: #8fb3c5;
+    --color-bg: #fdfdfd;
+    --color-text: #2c3e50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+  }
 }
 
-body {
-  /* Gebruik een Serif font voor een minder 'tech' gevoel */
-  font-family: 'Lora', serif;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-/* Knoppen: minder schaduw, meer elegantie */
-.btn-primary {
-  @apply px-10 py-4 bg-[#4a7c92] text-white rounded-full 
-         hover:bg-[#3d6679] transition-all duration-500 
-         tracking-widest uppercase text-xs font-bold;
-}
-
-/* Kaarten: zacht en dromerig */
-.card {
-  @apply bg-white/70 backdrop-blur-md p-8 rounded-[2.5rem] 
-         border border-blue-100/50 shadow-sm
-         hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500;
+@layer components {
+  .btn-primary {
+    @apply inline-block px-10 py-4 bg-[#4a7c92] text-white rounded-full 
+           hover:bg-[#3d6679] transition-all duration-300 
+           tracking-widest uppercase text-[10px] font-bold shadow-lg shadow-blue-900/10;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/50 shadow-sm rounded-[2.5rem];
+  }
 }
