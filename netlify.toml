@@ -1,12 +1,9 @@
 [build]
-  # De opdracht om je Astro site te bouwen
-  command = "npm run build"
-  
-  # De map waar Astro de voltooide website plaatst
+  # Gebruik npx om astro build uit te voeren
+  command = "npx astro build"
   publish = "dist"
 
 [build.environment]
-  # Zorgt ervoor dat de juiste Node.js versie wordt gebruikt
   NODE_VERSION = "20"
 
 [[headers]]
