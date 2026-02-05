@@ -1,0 +1,22 @@
+[build]
+  # De opdracht om je Astro site te bouwen
+  command = "npm run build"
+  
+  # De map waar Astro de voltooide website plaatst
+  publish = "dist"
+
+[build.environment]
+  # Zorgt ervoor dat de juiste Node.js versie wordt gebruikt
+  NODE_VERSION = "20"
+
+[[headers]]
+  # Optimalisatie voor caching van je assets (foto's uit je assets map)
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  # Voorkomt 404 fouten bij client-side routing (indien van toepassing)
+  from = "/*"
+  to = "/index.html"
+  status = 200
