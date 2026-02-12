@@ -4,24 +4,61 @@
   body {
     background-color: #fdfbf7;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    /* Zorgt voor een prettige leeservaring op mobiel */
+    @apply text-gray-900 antialiased;
   }
   
-  h1, h2, h3, .font-serif {
+  /* Responsieve koppen: kleiner op mobiel, groter op desktop */
+  h1 {
     font-family: 'Cormorant Garamond', serif;
+    @apply text-4xl md:text-6xl leading-tight;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    @apply text-3xl md:text-5xl leading-snug;
+  }
+
+  h3, .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+    @apply text-2xl md:text-3xl;
   }
 }
 
-/* Subtiele animatie voor het inladen van de pagina */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
+/* Container optimalisatie voor mobiel */
 .container {
+  @apply mx-auto px-4 md:px-8 max-w-7xl;
   animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Voor de boogvormige foto's door de hele site heen */
+/* Subtiele animatie: op mobiel is 20px soms te veel, 10px is subtieler */
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(15px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Responsieve Boogvormige foto's */
 .arch-card {
-  @apply rounded-t-full rounded-b-2xl overflow-hidden;
+  /* Op mobiel is de ronding vaak mooier als hij iets minder extreem is 
+     of juist perfect meeschaalt met de breedte */
+  @apply rounded-t-[500px] rounded-b-2xl overflow-hidden shadow-sm;
+  /* Zorgt dat de afbeelding altijd goed vult */
+  aspect-ratio: 4/5;
+}
+
+.arch-card img {
+  @apply w-full h-full object-cover;
+}
+
+/* Extra: Touch-vriendelijke knoppen (optioneel) */
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-full transition-all active:scale-95;
+  }
 }
