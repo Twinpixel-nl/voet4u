@@ -3,32 +3,67 @@ import { Image } from 'astro:assets';
 import foto2 from '../assets/foto2.jpeg';
 import foto3 from '../assets/foto3.jpeg';
 ---
-<section id="over-mij" class="py-20 bg-blue-50">
+
+<section id="over-mij" class="py-24 bg-[#fdfbf7] overflow-hidden">
   <div class="container mx-auto px-6">
-    <!-- Deel 1: Over de praktijk -->
-    <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
-      <div class="md:w-1/2">
-        <Image src={foto2} alt="De praktijk" class="rounded-2xl shadow-xl" />
-      </div>
-      <div class="md:w-1/2">
-        <h2 class="text-3xl font-bold text-blue-900">Gediplomeerd Pedicure</h2>
-        <p class="mt-4 text-slate-600">Anja is een gediplomeerd pedicure en voetreflextherapeut gevestigd in Randwijk. In haar rustige praktijk staat persoonlijke aandacht centraal.</p>
-      </div>
+    
+    <!-- Header: Strak & Creatief -->
+    <div class="mb-20 text-center md:text-left">
+      <span class="text-xs uppercase tracking-[0.2em] text-slate-400 font-sans">Persoonlijke aandacht</span>
+      <h2 class="text-5xl md:text-6xl font-serif mt-2 italic">De Praktijk</h2>
     </div>
 
-    <!-- Deel 2: Praktisch -->
-    <div id="praktisch" class="flex flex-col md:flex-row-reverse items-center gap-12">
-      <div class="md:w-1/2">
-        <Image src={foto3} alt="Behandeling" class="rounded-2xl shadow-xl" />
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+      
+      <!-- Linkerkolom: De Arch Image (Klein & Stijlvol) -->
+      <div class="md:col-span-5 lg:col-span-4">
+        <div class="arch-card shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-700">
+           <Image src={foto2} alt="De praktijk" class="w-full h-full object-cover" />
+        </div>
+        <p class="mt-6 font-serif italic text-slate-500 text-center">"Een moment van rust voor uw voeten."</p>
       </div>
-      <div class="md:w-1/2">
-        <h2 class="text-3xl font-bold text-blue-900">Praktische Informatie</h2>
-        <ul class="mt-6 space-y-4 text-slate-700">
-          <li class="flex items-center">✅ <strong>Geen pin:</strong> Betaling graag contant.</li>
-          <li class="flex items-center">✅ <strong>Afspraak:</strong> Behandelingen alleen volgens afspraak.</li>
-          <li class="flex items-center">✅ <strong>Annuleren:</strong> Minimaal 24 uur van tevoren.</li>
-        </ul>
+
+      <!-- Rechterkolom: Tekst content -->
+      <div class="md:col-span-7 lg:col-span-7 lg:offset-1 space-y-16">
+        
+        <!-- Over Anja -->
+        <div class="relative">
+          <h3 class="text-3xl font-serif mb-4">Gediplomeerd Pedicure</h3>
+          <p class="text-slate-600 leading-relaxed font-light max-w-xl">
+            Anja is een gediplomeerd pedicure en voetreflextherapeut gevestigd in Randwijk. 
+            In haar rustige praktijk staat persoonlijke aandacht centraal. Hier wordt niet alleen 
+            naar de klacht gekeken, maar naar de gehele mens achter de voet.
+          </p>
+        </div>
+
+        <!-- Praktisch blok: Creatief kader -->
+        <div id="praktisch" class="bg-white/50 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-slate-100 shadow-sm relative">
+           <h3 class="text-3xl font-serif mb-8 text-center md:text-left">Praktische Informatie</h3>
+           
+           <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div class="space-y-2">
+                <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Betaling</h4>
+                <p class="text-slate-700">Geen pin aanwezig. Graag <strong>contant</strong> betalen.</p>
+              </div>
+              
+              <div class="space-y-2">
+                <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Behandeling</h4>
+                <p class="text-slate-700">Uitsluitend volgens <strong>afspraak</strong>.</p>
+              </div>
+
+              <div class="space-y-2 sm:col-span-2 border-t border-slate-100 pt-6">
+                <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Annuleren</h4>
+                <p class="text-slate-700 italic text-sm text-balance">
+                  Kunt u een afspraak niet nakomen? Graag minimaal <strong>24 uur</strong> van tevoren annuleren.
+                </p>
+              </div>
+           </div>
+
+           <!-- Creatief element: kleine boog onderaan -->
+           <div class="absolute -bottom-6 -right-6 hidden md:block w-24 h-32 bg-slate-50 rounded-t-full -z-10 border border-slate-100 opacity-50"></div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
