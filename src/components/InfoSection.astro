@@ -15,7 +15,7 @@ import foto3 from '../assets/foto3.jpeg';
 
     <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
       
-      <!-- Linkerkolom: De Arch Image (Klein & Stijlvol) -->
+      <!-- Linkerkolom: De Arch Image -->
       <div class="md:col-span-5 lg:col-span-4">
         <div class="arch-card shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-700">
            <Image src={foto2} alt="De praktijk" class="w-full h-full object-cover" />
@@ -26,12 +26,14 @@ import foto3 from '../assets/foto3.jpeg';
       <!-- Rechterkolom: Tekst content -->
       <div class="md:col-span-7 lg:col-span-7 lg:offset-1 space-y-16">
         
-        <!-- Over Anja -->
+        <!-- Over Anja & De Massage -->
         <div class="relative">
           <h3 class="text-3xl font-serif mb-4">Gediplomeerd Voetreflextherapeut</h3>
-          <p class="text-slate-600 leading-relaxed font-light max-w-xl">
-            Ik ben Anja, een gediplomeerd pedicure en voetreflextherapeut en al 12 jaar gevestigd in Randwijk. In mijn rustige praktijk staat persoonlijke aandacht centraal. Hier kijk ik niet alleen naar de klacht, maar naar de gehele mens achter de voet.
-          </p>
+          <div class="text-slate-600 leading-relaxed font-light max-w-xl space-y-4">
+            <p>
+              Ik ben Anja, een gediplomeerd pedicure en voetreflextherapeut en al 12 jaar gevestigd in Randwijk. In mijn rustige praktijk staat persoonlijke aandacht centraal. Hier kijk ik niet alleen naar de klacht, maar naar de gehele mens achter de voet.
+            </p>
+          </div>
         </div>
 
         <!-- Praktisch blok: Creatief kader -->
@@ -41,17 +43,25 @@ import foto3 from '../assets/foto3.jpeg';
            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div class="space-y-2">
                 <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Betaling</h4>
-                <p class="text-slate-700">Geen pin aanwezig. Graag <strong>contant</strong> betalen.</p>
+                <p class="text-slate-700 text-sm">Geen pin aanwezig. Graag <strong>contant</strong> betalen (een betaalverzoek is ook mogelijk).</p>
               </div>
               
               <div class="space-y-2">
-                <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Behandeling</h4>
-                <p class="text-slate-700">Uitsluitend volgens <strong>afspraak</strong>.</p>
+                <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Meenemen</h4>
+                <p class="text-slate-700 text-sm">Graag een <strong>grote handdoek</strong> meenemen voor de behandeling.</p>
               </div>
 
-              <div class="space-y-2 sm:col-span-2 border-t border-slate-100 pt-6">
+              <div class="space-y-2">
+                <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Afspraak</h4>
+                <p class="text-slate-700 text-sm italic">Uitsluitend op afspraak:</p>
+                <a href="tel:0612345678" class="inline-block text-slate-500 hover:text-slate-800 transition-all duration-300 text-sm tracking-widest border-b border-slate-200 hover:border-slate-400 pb-0.5">
+                  06 - 12 34 56 78
+                </a>
+              </div>
+
+              <div class="space-y-2 border-t border-slate-100 pt-6 sm:border-t-0 sm:pt-0">
                 <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Annuleren</h4>
-                <p class="text-slate-700 italic text-sm text-balance">
+                <p class="text-slate-700 italic text-xs leading-relaxed">
                   Kunt u een afspraak niet nakomen? Graag minimaal <strong>24 uur</strong> van tevoren annuleren.
                 </p>
               </div>
