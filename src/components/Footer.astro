@@ -1,48 +1,62 @@
 <footer class="bg-white py-20 border-t border-slate-100">
   <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-start gap-12">
-      <div>
+    <!-- Flexbox houdt alles aan de linkerkant (justify-start) -->
+    <div class="flex flex-col md:flex-row justify-start items-center md:items-start gap-12 md:gap-24">
+      
+      <!-- Kolom 1: Logo & Beschrijving -->
+      <div class="text-center md:text-left md:max-w-xs">
         <div class="text-3xl font-serif text-[#2c3e50] mb-6">
           Voet <span class="italic text-[#4a7c92]">4 U</span>
         </div>
-        <p class="text-slate-500 text-sm max-w-xs leading-relaxed">
+        <p class="text-slate-500 text-sm leading-relaxed">
           Praktijk voor voetreflexmassages, oor-acupunctuur en cupping in Randwijk.
         </p>
       </div>
       
-      <div class="space-y-4">
+      <!-- Kolom 2: Contactgegevens -->
+      <div class="space-y-4 text-center md:text-left">
         <h4 class="font-bold uppercase text-[10px] tracking-widest text-slate-400">Contact & Locatie</h4>
         <p class="text-sm text-slate-600">
           Anja Jonker <br/>
-          Kon. Julianastraat 1A <br/>
-          6668 AG Randwijk
+          Randwijk
         </p>
         <p class="text-sm font-bold text-[#4a7c92]">
           T: 06 - 19 777 921 <br/>
-          E: info@voet4u.nl
+          E: anjajonker67@gmail.com
         </p>
       </div>
 
-      <div class="flex flex-col gap-4">
+      <!-- Kolom 3: Social Media (nu met extra marge links om naar rechts te schuiven) -->
+      <div class="flex flex-col items-center md:items-start gap-6 md:ml-12 lg:ml-20">
         <h4 class="font-bold uppercase text-[10px] tracking-widest text-slate-400">Volg mij</h4>
-        <a href="https://facebook.com/voet4u" class="text-sm text-[#4a7c92] hover:underline italic font-serif text-lg">
-          Bezoek mijn Facebook pagina voor tips & acties
-        </a>
+        
+        <div class="flex gap-4">
+          <!-- Facebook Icoon -->
+          <a href="https://facebook.com/voet4u" target="_blank" aria-label="Facebook" class="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#4a7c92] hover:text-white transition-all duration-500 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+
+          <!-- Instagram Icoon -->
+          <a href="https://instagram.com/anjajonker67" target="_blank" aria-label="Instagram" class="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#4a7c92] hover:text-white transition-all duration-500 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+        </div>
       </div>
     </div>
     
-<div class="mt-20 pt-8 border-t border-slate-100 text-center">
-  <p class="text-[10px] text-slate-400 uppercase tracking-widest">
-    &copy; {new Date().getFullYear()} Voet 4 U • Anja Jonker • Randwijk • 
-    <a 
-      href="https://twinpixel.nl" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="hover:text-slate-900 transition-colors duration-300"
-    >
-      Realisatie door Twinpixel
-    </a>
-  </p>
-</div>
+    <!-- Copyright & Credits -->
+    <div class="mt-20 pt-8 border-t border-slate-100 text-center">
+      <p class="text-[10px] text-slate-400 uppercase tracking-widest">
+        &copy; {new Date().getFullYear()} Voet 4 U • Anja Jonker • Randwijk • 
+        <a 
+          href="https://twinpixel.nl" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="hover:text-slate-900 transition-colors duration-300"
+        >
+          Realisatie door Twinpixel
+        </a>
+      </p>
+    </div>
   </div>
 </footer>
