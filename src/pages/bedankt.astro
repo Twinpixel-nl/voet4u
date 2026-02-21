@@ -2,10 +2,46 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Bedankt voor uw bericht">
-  <main class="py-24 text-center">
-    <h1 class="text-4xl font-serif italic mb-4">Bedankt voor uw bericht!</h1>
-    <p class="text-slate-600 mb-8">Ik heb uw bericht ontvangen en neem zo snel mogelijk contact met u op.</p>
-    <a href="/" class="text-[#4a7c92] underline">Terug naar de website</a>
+<Layout title="Bedankt voor uw bericht | Voet 4 U">
+  <main class="min-h-[80vh] flex items-center justify-center py-24 bg-[#fdfbf7]">
+    <div class="container mx-auto px-6 text-center">
+      <div class="max-w-2xl mx-auto space-y-10">
+        
+        <!-- Rustgevend Icoon -->
+        <div class="relative mx-auto w-24 h-24">
+          <div class="absolute inset-0 bg-[#4a7c92] opacity-10 rounded-full animate-ping"></div>
+          <div class="relative w-24 h-24 bg-white rounded-full shadow-sm border border-slate-100 flex items-center justify-center text-[#4a7c92]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Tekst Content -->
+        <div class="space-y-4">
+          <h1 class="text-5xl md:text-6xl font-serif italic text-[#2c3e50]">Bedankt!</h1>
+          <p class="text-xl font-serif text-slate-500 italic">Uw bericht is in goede orde ontvangen.</p>
+        </div>
+
+        <div class="max-w-md mx-auto">
+          <p class="text-slate-600 leading-relaxed font-light">
+            Wat fijn dat u contact heeft opgenomen. Ik neem zo snel mogelijk contact met u op om uw vraag te beantwoorden of een afspraak in te plannen.
+          </p>
+        </div>
+
+        <!-- Terug Knop -->
+        <div class="pt-8">
+          <a href="/" class="inline-block bg-[#4a7c92] text-white font-bold py-4 px-10 rounded-full hover:bg-[#3d6679] transition-all shadow-lg shadow-blue-900/10 uppercase tracking-widest text-xs">
+            Terug naar de website
+          </a>
+        </div>
+
+        <!-- Subtiele decoratie onderaan -->
+        <div class="pt-12">
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-300 font-sans">Voet 4 U • Anja Jonker</p>
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>
