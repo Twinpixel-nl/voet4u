@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- De teentjes: strakke cirkels in een elegante boog -->
+  <circle cx="125" cy="115" r="48" fill="#4a7c92"/>
+  <circle cx="225" cy="90" r="36" fill="#4a7c92"/>
+  <circle cx="310" cy="105" r="30" fill="#4a7c92"/>
+  <circle cx="385" cy="145" r="26" fill="#4a7c92"/>
+  <circle cx="440" cy="205" r="22" fill="#4a7c92"/>
+  
+  <!-- De voetzool: een minimalistische, druppelvormige zool -->
+  <path fill="#4a7c92" d="M380 265c-35-40-90-55-140-50s-90 35-100 90c-15 90 55 175 145 175s140-95 130-170c-2-20-10-35-35-45z"/>
+</svg>
