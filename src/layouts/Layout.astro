@@ -1,5 +1,11 @@
 ---
 import '../styles/global.css';
+
+// Props toevoegen zodat je per pagina de SEO kunt aanpassen
+const { 
+  title = "Voet 4 U | Pedicure & Voetreflextherapeut Randwijk", 
+  description = "Gediplomeerd pedicure en voetreflextherapeut Anja Jonker in Randwijk. Specialist in voetreflexmassage, oor-acupunctuur en cupping met 12 jaar ervaring." 
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="nl" class="scroll-smooth">
@@ -7,17 +13,63 @@ import '../styles/global.css';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Voet 4 U | Praktijk voor Voetreflexmassage & Ontspanning</title>
-		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D7YPQCXT83"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta name="generator" content={Astro.generator} />
 
-  gtag('config', 'G-D7YPQCXT83');
-</script>
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+    <link rel="canonical" href="https://www.voet4u.nl" /> <!-- Pas dit aan naar je echte URL als je die hebt -->
+
+    <!-- Open Graph (Facebook / WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://www.voet4u.nl" />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data: Super belangrijk voor Google Maps / Lokaal resultaat -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Voet 4 U",
+        "description": "Gediplomeerd pedicure en voetreflextherapeut Anja Jonker in Randwijk. Meer dan 12 jaar ervaring in voetreflexmassages, oor-acupunctuur en cupping.",
+        "url": "https://www.voet4u.nl",
+        "telephone": "0619777921",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Randwijk",
+          "addressRegion": "Gelderland",
+          "addressCountry": "NL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "51.9214", 
+          "longitude": "5.7128"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        "priceRange": "$$"
+      }
+    </script>
+
+	  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7YPQCXT83"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D7YPQCXT83');
+    </script>
 	</head>
 	<body class="bg-white text-slate-900 font-['Plus_Jakarta_Sans'] antialiased">
 		<slot />
