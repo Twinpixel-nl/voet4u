@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "dev": "astro dev",
-  "start": "astro dev",
-  "build": "astro build",
-  "preview": "astro preview",
-  "astro": "astro"
-},
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Twinpixel-nl/voet4u.git"
@@ -23,8 +23,13 @@
   },
   "homepage": "https://github.com/Twinpixel-nl/voet4u#readme",
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.9",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@astrojs/ts-plugin": "^1.10.6",
+    "typescript": "^5.9.3"
   }
 }
