@@ -15,24 +15,34 @@
       </div>
 
       <!-- Rechterkant: De Lijst -->
+<!-- Rechterkant: De Lijst -->
       <div class="md:w-3/5 p-16 bg-white">
         <div class="space-y-8">
-          {[
-            { n: "Kennismaking (30 min)", p: "€ 35,-" },
-            { n: "Intake + massage (90 min)", p: "€ 90,-" },
-            { n: "Vervolg Massage (60 min)", p: "€ 60,-" },
-            { n: "Vervolg Massage (90 min)", p: "€ 90,-" },
-            { n: "Oor-acupunctuur", p: "€ 30,-" },
-            { n: "Detox Cupping (90 min)", p: "€ 90,-" },
-            { n: "Holistisch 'Dat wat nodig is'", p: "€ 90,-" },
-            { n: "Selfcare Sessie (120 min)", p: "€ 110,-" }
-          ].map(item => (
-            <div class="flex justify-between items-center group">
-              <span class="text-lg font-serif text-slate-700 group-hover:text-[#4a7c92] transition-colors">{item.n}</span>
-              <div class="h-[1px] flex-1 border-b border-dashed border-slate-200 mx-4"></div>
-              <span class="text-xl font-bold text-[#4a7c92]">{item.p}</span>
-            </div>
-          ))}
+          {
+            [
+              { n: "Kennismaking (30 min)", p: "€ 35,-", cat: "Voetreflexmassage" },
+              { n: "Intake + massage (90 min)", p: "€ 90,-" },
+              { n: "Vervolg Massage (60 min)", p: "€ 60,-" },
+              { n: "Combi massage, voetreflex & cupping nek &schouders (90 min)", p: "€ 90,-", cat: "Overige behandelingen" },
+              { n: "Detox Cupping (90 min)", p: "€ 90,-" },
+              { n: "Oor-acupunctuur", p: "€ 30,-" },
+              { n: "Holistisch 'Dat was nodig is' (90 min)", p: "€ 90,-" },
+              { n: "Selfcare Sessie (120 min)", p: "€ 110,-" }
+            ].map((item) => (
+              <>
+                {item.cat && (
+                  <h3 class="text-[#4a7c92] font-bold text-xs uppercase tracking-[0.2em] pt-4 border-b border-blue-50 pb-2 mb-4">
+                    {item.cat}
+                  </h3>
+                )}
+                <div class="flex justify-between items-center group">
+                  <span class="text-lg font-serif text-slate-700 group-hover:text-[#4a7c92] transition-colors">{item.n}</span>
+                  <div class="h-[1px] flex-1 border-b border-dashed border-slate-200 mx-4"></div>
+                  <span class="text-xl font-bold text-[#4a7c92]">{item.p}</span>
+                </div>
+              </>
+            ))
+          }
         </div>
         
         <p class="mt-12 text-[10px] text-slate-400 uppercase tracking-widest text-center">
